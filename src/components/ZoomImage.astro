@@ -2,7 +2,7 @@
 const { src, alt = "" } = Astro.props;
 ---
 
-<img src={src} alt={alt} class="zoom-img" />
+<img src={src} alt={alt} class="zoom-img" loading="lazy"/>
 
 <style>
 .zoom-img {
