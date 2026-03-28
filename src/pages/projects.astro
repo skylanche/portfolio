@@ -1,0 +1,101 @@
+---
+import { getCollection } from "astro:content";
+import ButtonLink from "../components/ButtonLink.astro";
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import HorizontalSeparator from "../components/HorizontalSeparator.astro";
+import ZoomImage from "../components/ZoomImage.astro"
+
+const projects = await getCollection('project');
+
+const heading = "My Projects"
+const metadescription ="Explore my projects in SEO, UI/UX design, website development, and marketing analysis showcasing creative solutions, strategy, and results-driven work."
+---
+
+<Layout metatitle={heading} metadescription={metadescription}>
+  <Section>
+<h1>{heading}</h1>
+
+{projects.map(project =>(
+<div class="card">
+  <ZoomImage src={project.data.image} alt={project.data.title} />
+  <div>
+    <h3>
+        {project.data.title}
+    </h3>
+    <p class="description">{project.data.description}</p>
+    <div class="button-container">
+      <ButtonLink
+        href={`${project.data.githubURL}`}
+        text="View on Github"
+        variant="secondary"
+        isNewTab ={true}
+      />
+      <ButtonLink
+        href={`${project.data.liveSiteURL}`}
+        text="View Live"
+        isNewTab ={true}
+      />
+    </div>
+  </div>
+</div>
+<HorizontalSeparator/>))
+}
+</Section>
+</Layout>
+
+<style>
+
+  .card {
+    overflow: hidden;
+    display: flex;
+    gap: 40px;
+
+    h3{
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      margin-bottom: 40px;
+      color: var(--white);
+    }
+
+    img {
+      height: 200px;
+      object-fit: cover;
+      border: 1px solid var(--primary);
+      border-radius: 10px;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    
+    @media (max-width: 800px) {
+      & {
+        flex-direction: column;
+      }
+
+      img {
+        align-self: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .button-container {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      img{
+        width: 100%;
+      }
+      
+    }
+  }
+</style>

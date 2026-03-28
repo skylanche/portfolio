@@ -1,0 +1,26 @@
+[
+    {
+      "skillname": "SEO",
+      "image": "/images/skills/seo.png"
+    },
+    {
+      "skillname": "Google Ads",
+      "image": "/images/skills/google-ads.png"
+    },
+    {
+      "skillname": "Meta Ads",
+      "image": "/images/skills/meta-ads.png"
+    },
+    {
+      "skillname": "HTML",
+      "image": "/images/skills/html.png"
+    },
+    {
+      "skillname": "CSS",
+      "image": "/images/skills/css.png"
+    },
+    {
+      "skillname": "Javascript",
+      "image": "/images/skills/javascript.png"
+    }
+  ]

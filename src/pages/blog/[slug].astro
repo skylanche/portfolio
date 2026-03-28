@@ -1,0 +1,131 @@
+---
+import { getCollection, render, type CollectionEntry} from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  return posts.map(post => ({
+    params: { slug: post.data.slug },
+    props: { post }
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout metatitle={post.data.title} metadescription={post.data.description}>
+  <Section>
+    <div class="post">
+      <h1 class="post-title">{post.data.title}</h1>
+      <img src={post.data.image} alt={post.data.title} class="post-image"/>
+      <p class="post-date">{post.data.date}</p>
+      <Content/>
+    </div>
+  </Section>
+</Layout>
+
+<style>
+  .post {
+    .post-image {
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 40px;
+      border-radius: 10px;
+    }
+
+    .post-title {
+      margin-bottom: 16px;
+    }
+
+    .post-date {
+      font-size: 20px;
+      color: var(--light);
+      margin-bottom: 30px;
+    }
+
+    h2, h3, p {
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+
+  
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  margin: 1.5rem 0;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+
+th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+
+td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+tr:hover {
+  background-color: #f3f4f6;
+}
+
+td:first-child, th:first-child {
+  font-weight: 500;
+  background-color: inherit;
+}
+
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    white-space: nowrap; /* prevents wrapping within cells; use carefully */
+  }
+  
+
+  th, td {
+    white-space: normal;
+  }
+  
+  table, th, td {
+    font-size: 0.875rem;
+  }
+  
+  td:first-child, th:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 2px 0 5px -2px rgba(0,0,0,0.1);
+  }
+  
+  tr:nth-child(even) td:first-child {
+    background-color: #f9fafb;
+  }
+  
+  tr:hover td:first-child {
+    background-color: #f3f4f6;
+  }
+}
+  }
+</style>

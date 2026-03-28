@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+export const prerender = true;
+export const getStaticPaths = [];
+---
+
+<Layout metatitle={"404"}>
+  <main>
+    <h1>404 - Page Not Found</h1>
+    <p>Oops! The page you’re looking for does not exist.</p>
+    <ButtonLink href="/" text="Go back home" variant='secondary' />
+  </main>
+</Layout>
+
+<style>
+main{
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    padding: 80px;
+    align-items: center;
+    justify-content: center;
+
+    p{
+        margin-bottom: 20px;
+    }
+}
+</style>

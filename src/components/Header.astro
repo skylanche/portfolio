@@ -1,0 +1,86 @@
+---
+import ButtonLink from "./ButtonLink.astro";
+import Section from "./Section.astro";
+---
+<Section>  
+  <header id="header">
+    <div class="content">
+      <h1>
+      Hi, I am Sakthi.
+      <span class="accent">SEO Executive</span> & Growth Marketer
+      </h1>
+      <div class="description">
+       <p> I’m a Growth Marketer specializing in SEO & AI Search, Google & Meta Ads, HTML, CSS, Advanced JS.</p>
+        <p>Currently upskilling myself with AI tech, SEO automation and other JS frameworks I have 5 plus years experience in
+        B2C & D2C(Ecommerce), Consumer Services and B2B marketing online to improve Brand visibility, reach and Ad conversions.</p>
+      </div>
+      <div class="button-container">
+         <ButtonLink href="/projects" text="View projects" variant='secondary' />
+         <ButtonLink href="/resume.pdf" text="Download resume" isDownload={true}/>
+      </div>
+    </div>
+    <img src="/images/me.JPG" />
+  </header>
+</Section>
+
+<style>
+   #header {
+    display: grid;
+    grid-template-columns: 540px 1fr;
+    justify-items: center;
+    gap: 80px;
+    align-items: center;
+
+    img{
+      width: 350px;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-size: 44px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      color: var(--white);
+
+      .accent {
+        color: var(--primary);
+      }
+    }
+
+    .button-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    p{
+      padding-bottom: 5px;
+    }
+
+    .description {
+      line-height: 28px;
+      color: var(--white);
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 1000px) {
+      & {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 40px;
+
+        img {
+          grid-row: 1;
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      .button-container {
+        flex-direction: column;
+      }
+    }
+  }
+
+ 
+</style>

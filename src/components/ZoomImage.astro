@@ -1,0 +1,121 @@
+---
+const { src, alt = "" } = Astro.props;
+---
+
+<img src={src} alt={alt} class="zoom-img" />
+
+<style>
+.zoom-img {
+  cursor: zoom-in;
+}
+
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 999;
+}
+
+.zoom-clone {
+  position: fixed;
+  z-index: 1000;
+  will-change: transform;
+  transition: transform 0.3s ease;
+  cursor: zoom-out;
+}
+</style>
+
+<script>
+if (typeof window !== "undefined") {
+  document.querySelectorAll(".zoom-img").forEach(img => {
+
+    img.addEventListener("click", () => {
+
+      const rect = img.getBoundingClientRect();
+
+      // Clone image
+      const clone = img.cloneNode();
+      clone.classList.add("zoom-clone");
+
+      clone.style.top = rect.top + "px";
+      clone.style.left = rect.left + "px";
+      clone.style.width = rect.width + "px";
+      clone.style.height = rect.height + "px";
+
+      document.body.appendChild(clone);
+
+      // Overlay
+      const overlay = document.createElement("div");
+      overlay.className = "zoom-overlay";
+      document.body.appendChild(overlay);
+
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+      const margin = 40;
+
+      const scale = Math.min(
+        (viewportWidth - margin) / rect.width,
+        (viewportHeight - margin) / rect.height
+      );
+
+      const translateX =
+        viewportWidth / 2 - (rect.left + rect.width / 2);
+
+      const translateY =
+        viewportHeight / 2 - (rect.top + rect.height / 2);
+
+      requestAnimationFrame(() => {
+        clone.style.transform = `
+          translate(${translateX}px, ${translateY}px)
+          scale(${scale})
+        `;
+      });
+
+      const close = () => {
+  clone.style.transform = "translate(0,0) scale(1)";
+
+  setTimeout(() => {
+    clone.remove();
+    overlay.remove();
+  }, 300);
+
+  document.removeEventListener("click", handleOutsideClick);
+  document.removeEventListener("keydown", handleEsc);
+};
+
+const handleOutsideClick = (e) => {
+  
+  if (!clone.contains(e.target)) {
+    close();
+  }
+};
+
+const handleEsc = (e) => {
+  if (e.key === "Escape") {
+    close();
+  }
+};
+
+clone.addEventListener("click", (e) => {
+  e.stopPropagation();
+  close();
+});
+
+setTimeout(() => {
+  document.addEventListener("click", handleOutsideClick);
+  document.addEventListener("keydown", handleEsc);
+}, 0);
+
+      overlay.onclick = close;
+      clone.onclick = close;
+
+      document.addEventListener("keydown", function esc(e) {
+        if (e.key === "Escape") {
+          close();
+          document.removeEventListener("keydown", esc);
+        }
+      });
+    });
+  });
+}
+</script>

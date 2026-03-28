@@ -1,0 +1,67 @@
+---
+import Section from "./Section.astro";
+import SectionHeader from "./SectionHeader.astro"
+import { getCollection } from "astro:content";
+import ZoomImage from "./ZoomImage.astro"
+
+const projects = await getCollection('project');
+
+const heading = "My Projects";
+const cta = { text: 'View All', href: '/projects' };
+  ---
+<Section>
+  <SectionHeader cta={cta} heading={heading}/>
+
+  <div class="projects-container">
+    {
+      projects.map(project => (
+        <div class="card">
+          <ZoomImage src={project.data.image} alt={project.data.title}/>
+          <h3><a target="_blank" href={project.data.liveSiteURL}>{project.data.title}</a></h3>
+        </div>
+      ))
+    }
+  </div>
+</Section>
+
+<style>
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    
+    .card {
+      overflow: hidden;
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    img{
+      border: 1px solid var(--primary);
+      border-radius: 10px;
+    }
+
+    h3 {
+      margin-top: 20px;;
+    }
+      
+      a {
+        text-decoration: none;
+        color: var(--white);
+        font-weight:  600;
+        font-size: 18px;
+      }
+      
+      @media (max-width: 700px) {
+        & {
+          grid-template-columns: 1fr;
+        }
+        
+      
+    }
+  }
+
+</style>
