@@ -1,0 +1,26 @@
+[
+    {
+      "toolname": "SEMrush",
+      "image": "/images/tools/semrush.png"
+    },
+    {
+      "toolname": "Ahrefs",
+      "image": "/images/tools/ahrefs.png"
+    },
+    {
+      "toolname": "Screaming Frog",
+      "image": "/images/tools/screaming-frog.png"
+    },
+    {
+      "toolname": "GSC, GA4, Tag Manager",
+      "image": "/images/tools/analytics.png"
+    },
+    {
+      "toolname": "Claude",
+      "image": "/images/tools/claude.png"
+    },
+    {
+      "toolname": "Deepseek",
+      "image": "/images/tools/deepseek.png"
+    }
+  ]

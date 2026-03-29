@@ -1,0 +1,49 @@
+---
+import tools from "../data/tools.json";
+const heading = "Expertise"
+import Section from './Section.astro'
+---
+
+<Section>
+	<h2>{heading}</h2>
+	<div class="tool-cards">
+	   { tools.map( tool => (
+		<div class="tool">
+        <img src={tool.image} alt={tool.toolname}/>
+		<h3>{tool.toolname}</h3>
+		</div>
+      ))
+     }
+	 </div>
+</Section>
+
+<style>
+.tool-cards{
+	display: grid;
+	grid-template: repeat(2,1fr)/repeat(3,1fr);
+	padding: 30px 0;
+	text-align: center;
+	justify-content: center;
+	gap: 50px 10px;
+
+	img{
+		width: 100px;
+	}
+}
+
+.tool img{
+	border: 2px solid var(--primary);
+	border-radius: 5px;
+	padding: 10px;
+	margin: 20px;
+    box-shadow: 0 5px 5px var(--primary);
+}
+
+@media (max-width: 600px) {
+      .tool-cards {
+		display: flex;
+        flex-wrap: wrap;
+      }
+      
+    }
+</style>

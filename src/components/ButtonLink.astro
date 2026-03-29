@@ -15,7 +15,7 @@ const {href, text, variant="primary", isDownload, isNewTab} = Astro.props;
 }
 
 {!isDownload && isNewTab?
-  <a target="_blank" href={href} class={`button-link ${variant}`}>{text}</a>:!isDownload?
+  <a target="_blank" rel="noopener" href={href} class={`button-link ${variant}`}>{text}</a>:!isDownload?
   <a href={href} class={`button-link ${variant}`}>{text}</a>:null
 }
 
