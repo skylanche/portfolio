@@ -26,6 +26,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <title>{metatitle}</title>
     <meta name="description" content={metadescription}/>
     <link rel="canonical" href={canonical.href} />
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" />
+    <link rel="alternate icon" type="image/x-icon" href="/images/favicon.ico" />
   </head>
   <body>
   <Navbar/>
