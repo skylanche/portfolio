@@ -7,6 +7,7 @@ interface Props {
 }
 
 const {metatitle, metadescription} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -24,6 +25,7 @@ const {metatitle, metadescription} = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{metatitle}</title>
     <meta name="description" content={metadescription}/>
+    <link rel="canonical" href={canonical.href} />
   </head>
   <body>
   <Navbar/>
