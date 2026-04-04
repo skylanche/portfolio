@@ -1,18 +1,16 @@
 [
     {
-      "title": "E-commerce Dashbord",
-      "slug": "ecommerce-dashboard",
-      "description": "A fast, scalable admin panel for managing products, orders, and sales analytics. Built with React, Next.js, Firebase, and TailwindCSS.",
-      "image": "/images/projects/project-1.png",
-      "githubURL": "https://github.com/skylanche",
-      "liveSiteURL": "https://skylanche.com"
+      "title": "UviCorn Link Analyzer",
+      "slug": "uvicorn-website-crawler",
+      "description": "A fast, local server enabled uvicorn Webcrawler to crawl websites and generate link report storing them in SQLite.",
+      "image": "/images/projects/uvicorn-website-crawler.png",
+      "githubURL": "https://github.com/skylanche/uvicorn-website-crawler"
     },
     {
       "title": "Forbes Advisor Personal Finance",
       "slug": "forbes-advisor-project",
       "description": "Implemented GA4 monetization tracking and KPI reporting, recovered 28% of Finserv traffic after Google updates through competitor analysis and content optimization across US, UK, and Canada, collaborated with the Dev team to improve Web Vitals, and achieved a 37% increase in annual revenue.",
       "image": "/images/projects/forbes-advisor-project.png",
-      "githubURL": "https://github.com/skylanche",
       "liveSiteURL": "https://www.forbes.com/advisor/"
     },
     {
@@ -20,7 +18,6 @@
       "slug": "kauverymeds-seo",
       "description": "Drove SEO and growth for a healthcare eCommerce site through content strategy, technical improvements, and backlinks, increasing traffic from 1K to 100K monthly via SEO and paid ads.",
       "image": "/images/projects/kauverymeds-project.png",
-      "githubURL": "https://github.com/skylanche",
       "liveSiteURL": "https://www.kauverymeds.com/"
     }
   ]
