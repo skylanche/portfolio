@@ -17,7 +17,7 @@ const cta = { text: 'View All', href: '/projects' };
       projects.map(project => (
         <div class="card">
           <ZoomImage src={project.data.image} alt={project.data.title}/>
-          <h3><a target="_blank" rel="noopener noreferrer nofollow" href={project.data.liveSiteURL}>{project.data.title}</a></h3>
+          <h3>{project.data.liveSiteURL?<a target="_blank" rel="noopener noreferrer nofollow" href={project.data.liveSiteURL}>{project.data.title}</a>:{project.data.title}}</h3>
         </div>
       ))
     }
