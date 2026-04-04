@@ -1,6 +1,6 @@
 [
     {
-      "title": "Claude UviCorn Link Analyzer",
+      "title": "Claude Uvicorn Link Analyzer",
       "slug": "uvicorn-website-crawler",
       "description": "A fast, local server enabled uvicorn Webcrawler to crawl websites and generate link report storing them in SQLite.",
       "image": "/images/projects/uvicorn-website-crawler.png",
