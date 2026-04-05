@@ -20,7 +20,15 @@
       "image": "/images/tools/claude.png"
     },
     {
-      "toolname": "Deepseek",
-      "image": "/images/tools/deepseek.png"
+      "toolname": "Wordpress CMS",
+      "image": "/images/tools/wordpress.png"
+    },
+    {
+      "toolname": "Youtube",
+      "image": "/images/tools/youtube.png"
+    },
+    {
+      "toolname": "Shopify CMS",
+      "image": "/images/tools/shopify.png"
     }
   ]
