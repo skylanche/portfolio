@@ -20,6 +20,10 @@
       "image": "/images/tools/claude.png"
     },
     {
+      "toolname": "Deepseek",
+      "image": "/images/tools/deepseek.png"
+    },    
+    {
       "toolname": "Wordpress CMS",
       "image": "/images/tools/wordpress.png"
     },
