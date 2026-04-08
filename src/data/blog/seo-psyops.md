@@ -9,7 +9,7 @@ tags:
   - Psyops
 ---
 
-SEO is not a formal part of military doctrine**, but **the techniques, principles, and technologies of SEO are absolutely used in psychological operations (PSYOP) and military intelligence**.
+SEO is not a formal part of military doctrine, but the techniques, principles, and technologies of SEO are absolutely used in psychological operations (PSYOP) and military intelligence.
 
 To understand the relationship, it's best to separate the *tool* (SEO) from the *mission* (PSYOP/intelligence). Here's a breakdown of how they intersect.
 
@@ -88,7 +88,9 @@ Commercial SEO firms operate in the open, optimizing content for Google's Terms 
 When SEO is used in PSYOP or military intelligence, it crosses into **information warfare** when:
 
 **Spoofing:** Creating websites that impersonate legitimate news agencies or government entities.
+
 **De-anonymization:** Using SEO data to identify and target individuals for harassment or arrest.
+
 **Search Result Censorship:** Using cyber tactics (hacking) to delist or de-rank legitimate opposition content while boosting state-sponsored propaganda.
 
 ---
