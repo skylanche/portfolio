@@ -1,7 +1,5 @@
 ---
 const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY
-
-
 ---
 
 
@@ -15,10 +13,6 @@ const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY
         <div>
         <img src="/images/icons/linkedin.png" alt="LinkedIn icon"/>
         <a href="https://linkedin.com/in/sakthi-vignesh-kumar-324ab9144" target="_blank" rel="me noopener">LinkedIn</a>
-        </div>
-        <div>
-        <img src="/images/icons/email.png" alt="Email icon"/>
-        <p>sakthivigneshvk@gmail.com</p>
         </div>
       </div>
 
@@ -164,8 +158,8 @@ form.addEventListener('submit', async (e) => {
         const data = await response.json();
 
         if (response.ok) {
-            alert("Success! Your message has been sent.");
             form.reset();
+            window.location.href = "/thank-you";
         } else {
             alert("Error: " + data.message);
         }
