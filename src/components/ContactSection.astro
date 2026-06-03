@@ -35,7 +35,7 @@ const FORM_ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY
 
    <div class="contact-form">
       <h2>Send a Message</h2>
-      <form action="https://api.web3forms.com/submit" method="POST">
+      <form id="form" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value={FORM_ACCESS_KEY}>
 
         <label for="name">Name</label>
