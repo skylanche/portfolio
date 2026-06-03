@@ -1,5 +1,5 @@
 ---
-const FORM_ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY
+const ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY
 
 ---
 
@@ -36,7 +36,7 @@ const FORM_ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY
    <div class="contact-form">
       <h2>Send a Message</h2>
       <form id="form" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value={FORM_ACCESS_KEY}>
+      <input type="hidden" name="access_key" value={ACCESS_KEY}>
 
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -49,7 +49,7 @@ const FORM_ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY
 
         <div class="h-captcha" data-captcha="true"></div>
 
-        <button id="contact-form-sumbit-btn" type="submit">Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
 </div>
@@ -144,13 +144,13 @@ justify-content: space-between;
 <script>
 
 const form = document.getElementById('form');
-const submitBtn = form.querySelector('#contact-form-sumbit-btn');
+const submitBtn = form.querySelector('button[type="submit"]');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    formData.append("access_key", {FORM_ACCESS_KEY});
+    formData.append("access_key", {ACCESS_KEY});
 
     const originalText = submitBtn.textContent;
 
