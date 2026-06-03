@@ -37,13 +37,13 @@ const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY
       <input type="hidden" name="access_key" value={accessKey}>
 
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
+        <input type="text" id="name" name="name" maxlength="100" placeholder="Your name" required>
 
         <label for="email">Business Email</label>
         <input type="email" id="email" name="email" placeholder="your@company.com" required>
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+        <textarea id="message" name="message" maxlength="1000" rows="4" placeholder="Your message" required></textarea>
 
         <div class="h-captcha" data-captcha="true"></div>
 
