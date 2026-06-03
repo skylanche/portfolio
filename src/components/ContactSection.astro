@@ -1,7 +1,7 @@
 ---
 const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY
 
-console.log(accessKey)
+
 ---
 
 
@@ -53,7 +53,6 @@ console.log(accessKey)
 
         <button type="submit">Send Message</button>
       </form>
-    </div>
 </div>
 
 <style>
@@ -142,8 +141,7 @@ justify-content: space-between;
 }
 </style>
 
-<script define:vars={{ accessKey }}>
-
+<script>
 const form = document.getElementById('contact-form');
 const submitBtn = form.querySelector('button[type="submit"]');
 
@@ -151,7 +149,6 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    formData.append("access_key", String(accessKey).trim());
 
     const originalText = submitBtn.textContent;
 
