@@ -23,6 +23,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       rel="stylesheet"
     />
     <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="noindex, nofollow">
+
     <title>{metatitle}</title>
     <meta name="description" content={metadescription}/>
     <link rel="canonical" href={canonical.href} />
@@ -33,7 +35,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <Navbar/>
     <slot />
   <Footer/>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
   </body>
+  
   <style is:global>
     body {
       margin: 0;
