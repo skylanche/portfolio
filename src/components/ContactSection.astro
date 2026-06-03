@@ -1,5 +1,7 @@
 ---
 const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY
+
+console.log(accessKey)
 ---
 
 
@@ -35,7 +37,7 @@ const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY
 
    <div class="contact-form">
       <h2>Send a Message</h2>
-      <form id="form" action="https://api.web3forms.com/submit" method="POST">
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value={accessKey}>
 
         <label for="name">Name</label>
@@ -142,14 +144,14 @@ justify-content: space-between;
 
 <script define:vars={{ accessKey }}>
 
-const form = document.getElementById('form');
+const form = document.getElementById('contact-form');
 const submitBtn = form.querySelector('button[type="submit"]');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    formData.append("access_key", accessKey);
+    formData.append("access_key", String(accessKey).trim());
 
     const originalText = submitBtn.textContent;
 
