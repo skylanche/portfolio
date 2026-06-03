@@ -140,8 +140,8 @@ justify-content: space-between;
 }
 </style>
 
-<script>
-const ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY
+<script define:vars={{ ACCESS_KEY }}>
+const FORM_ACCESS_KEY = ACCESS_KEY
 
 const form = document.getElementById('form');
 const submitBtn = form.querySelector('button[type="submit"]');
@@ -150,7 +150,7 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    formData.append("access_key", ACCESS_KEY);
+    formData.append("access_key", FORM_ACCESS_KEY);
 
     const originalText = submitBtn.textContent;
 
