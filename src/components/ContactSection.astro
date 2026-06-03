@@ -1,7 +1,5 @@
 ---
-const ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY
-
-const DATA_SITE_KEY = import.meta.env.HCAPTCHA_SITE_KEY
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY
 ---
 
 
@@ -38,7 +36,7 @@ const DATA_SITE_KEY = import.meta.env.HCAPTCHA_SITE_KEY
    <div class="contact-form">
       <h2>Send a Message</h2>
       <form id="form" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value={ACCESS_KEY}>
+      <input type="hidden" name="access_key" value={accessKey}>
 
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -142,7 +140,7 @@ justify-content: space-between;
 }
 </style>
 
-<script define:vars={{ ACCESS_KEY }}>
+<script define:vars={{ accessKey }}>
 
 const form = document.getElementById('form');
 const submitBtn = form.querySelector('button[type="submit"]');
@@ -151,7 +149,7 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    formData.append("access_key", ACCESS_KEY);
+    formData.append("access_key", accessKey);
 
     const originalText = submitBtn.textContent;
 
