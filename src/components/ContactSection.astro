@@ -49,7 +49,7 @@ const FORM_ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_KEY
 
         <div class="h-captcha" data-captcha="true"></div>
 
-        <button type="submit">Submit</button>
+        <button id="contact-form-sumbit-btn" type="submit">Submit</button>
       </form>
     </div>
 </div>
@@ -144,7 +144,7 @@ justify-content: space-between;
 <script>
 
 const form = document.getElementById('form');
-const submitBtn = form.querySelector('button[type="submit"]');
+const submitBtn = form.querySelector('#contact-form-sumbit-btn');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
