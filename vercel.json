@@ -4,6 +4,11 @@
       "source": "/(.*)/",
       "destination": "/$1",
       "permanent": true
+    },
+    {
+      "source": "/:path*/index.html",
+      "destination": "/:path*",
+      "permanent": true
     }
   ]
 }
