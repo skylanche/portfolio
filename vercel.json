@@ -13,7 +13,7 @@
   ],
   "headers": [
     {
-      "source": "/(.*)\\.pdf",
+      "source": "/resume.pdf",
       "headers": [
         {
           "key": "X-Robots-Tag",
