@@ -34,5 +34,17 @@
     {
       "toolname": "Shopify CMS",
       "image": "/images/tools/shopify.png"
+    },
+    {
+      "toolname": "VSC",
+      "image": "/images/tools/vsc.png"
+    },
+    {
+      "toolname": "Github",
+      "image": "/images/tools/github.png"
+    },
+    {
+      "toolname": "VidIQ",
+      "image": "/images/tools/vidiq.png"
     }
   ]
