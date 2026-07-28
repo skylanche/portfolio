@@ -25,12 +25,12 @@ const metadescription ="Explore my projects in SEO, UI/UX design, website develo
     </h3>
     <p class="description">{project.data.description}</p>
     <div class="button-container">
-      <ButtonLink
+      {project.data.githubURL && <ButtonLink
         href={`${project.data.githubURL}`}
         text="View on Github"
         variant="secondary"
         isNewTab ={true}
-      />
+      />}
       <ButtonLink
         href={`${project.data.liveSiteURL}`}
         text="View Live"
