@@ -8,6 +8,14 @@
       "liveSiteURL": "https://uvicorn-website-crawler.vercel.app/"
     },
     {
+      "title": "Convert Text to Gemini Vector Embeddings",
+      "slug": "text-to-gemini-vector-embeddings",
+      "description": "Developed an application that converts text into Gemini vector embeddings using the Gemini API and stores them in PostgreSQL, enabling efficient semantic search and analysis.",
+      "image": "/images/projects/text-to-gemini.png",
+      "githubURL": "https://github.com/skylanche/convert-text-to-gemini-vector-embedding",
+      "liveSiteURL": "https://convert-text-to-gemini-vector-embedding-1.onrender.com/"
+    },
+    {
       "title": "Forbes Advisor Personal Finance",
       "slug": "forbes-advisor-project",
       "description": "Implemented GA4 monetization tracking and KPI reporting, recovered 28% of Finserv traffic after Google updates through competitor analysis and content optimization across US, UK, and Canada, collaborated with the Dev team to improve Web Vitals, and achieved a 37% increase in annual revenue.",
