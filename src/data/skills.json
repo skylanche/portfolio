@@ -22,5 +22,17 @@
     {
       "skillname": "Javascript",
       "image": "/images/skills/javascript.png"
+    },
+    {
+      "skillname": "PHP",
+      "image": "/images/skills/php.png"
+    },
+    {
+      "skillname": "Tailwind CSS",
+      "image": "/images/skills/tailwindcss.png"
+    },
+    {
+      "skillname": "Typescript",
+      "image": "/images/skills/typescript.png"
     }
   ]
