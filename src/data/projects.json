@@ -1,5 +1,21 @@
 [
-    {
+  {
+      "title": "AI Auto Internal Link Suggester",
+      "slug": "ai-auto-internal-link-suggester",
+      "description": "Suggests internal links for a page. Give it a page URL and your sitemap URL; an AI model (Claude, OpenAI, NVIDIA, or any OpenAI-compatible API) picks relevant sitemap pages and proposes up to 2 anchor texts per target URL, taken from body paragraphs only (never headings). Irrelevant URLs are skipped.",
+      "image": "/images/projects/ai-auto-internal-link-suggester.png",
+      "githubURL": "https://github.com/skylanche/auto-internal-link-suggester",
+      "liveSiteURL": ""
+    },
+  {
+      "title": "JS Rendering Link Analyzer",
+      "slug": "js-render-link-crawler",
+      "description": "A fast, local server enabled uvicorn Webcrawler to render and crawl Javascript websites and generate link report in CSV and XLSX format",
+      "image": "/images/projects/js-rendering-website-crawler.png",
+      "githubURL": "https://github.com/skylanche/rog-talon-js-render-link-crawler",
+      "liveSiteURL": ""
+    },    
+  {
       "title": "Claude Uvicorn Link Analyzer",
       "slug": "uvicorn-website-crawler",
       "description": "A fast, local server enabled uvicorn Webcrawler to crawl websites and generate link report storing them in SQLite.",
@@ -16,15 +32,15 @@
       "liveSiteURL": "https://convert-text-to-gemini-vector-embedding-1.onrender.com/"
     },
     {
-      "title": "Forbes Advisor Personal Finance",
+      "title": "Forbes Advisor Personal Finance SEO",
       "slug": "forbes-advisor-project",
-      "description": "Implemented GA4 monetization tracking and KPI reporting, recovered 28% of Finserv traffic after Google updates through competitor analysis and content optimization across US, UK, and Canada, collaborated with the Dev team to improve Web Vitals, and achieved a 37% increase in annual revenue.",
+      "description": "Implemented GA4 monetization tracking and KPI reporting, Executed On-Page, Off-page and Technical SEO recovered 28% of Finserv traffic after Google updates through competitor analysis and content optimization across US, UK, and Canada, collaborated with the Dev team to improve Web Vitals, and achieved a 37% increase in annual revenue.",
       "image": "/images/projects/forbes-advisor-project.png",
       "githubURL": "",
       "liveSiteURL": "https://www.forbes.com/advisor/"
     },
     {
-      "title": "Kauverymeds Healthcare",
+      "title": "Kauverymeds Healthcare SEO",
       "slug": "kauverymeds-seo",
       "description": "Drove SEO and growth for a healthcare eCommerce site through content strategy, technical improvements, and backlinks, increasing traffic from 1K to 300K monthly via SEO and paid ads.",
       "image": "/images/projects/kauverymeds-project.png",
