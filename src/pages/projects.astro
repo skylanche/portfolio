@@ -31,11 +31,12 @@ const metadescription ="Explore my projects in SEO, UI/UX design, website develo
         variant="secondary"
         isNewTab ={true}
       />}
+      {project.data.liveSiteURL &&
       <ButtonLink
         href={`${project.data.liveSiteURL}`}
         text="View Live"
         isNewTab ={true}
-      />
+      />}
     </div>
   </div>
 </div>
