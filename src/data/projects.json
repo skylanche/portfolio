@@ -16,12 +16,12 @@
       "liveSiteURL": ""
     },    
   {
-      "title": "Claude Uvicorn Link Analyzer",
-      "slug": "uvicorn-website-crawler",
-      "description": "A fast, local server enabled uvicorn Webcrawler to crawl websites and generate link report storing them in SQLite.",
-      "image": "/images/projects/uvicorn-website-crawler.png",
-      "githubURL": "https://github.com/skylanche/uvicorn-website-crawler",
-      "liveSiteURL": "https://uvicorn-website-crawler.vercel.app/"
+      "title": "Energy and Industrial Sector Services SEO",
+      "slug": "energy-sector-seo",
+      "description": "On Page SEO, Content Strategy, JS Rendering and Technical SEO, Social Media Management, Backlink Acquisition, GMB based Local SEO and ORM for AI Brand Mentions and Worldwide Lead Generation",
+      "image": "/images/projects/avr-project.png",
+      "githubURL": "",
+      "liveSiteURL": "https://avrenergies.com/"
     },
     {
       "title": "Convert Text to Gemini Vector Embeddings",
@@ -40,7 +40,7 @@
       "liveSiteURL": "https://www.forbes.com/advisor/"
     },
     {
-      "title": "Kauverymeds Healthcare SEO",
+      "title": "Healthcare SEO",
       "slug": "kauverymeds-seo",
       "description": "Drove SEO and growth for a healthcare eCommerce site through content strategy, technical improvements, and backlinks, increasing traffic from 1K to 300K monthly via SEO and paid ads.",
       "image": "/images/projects/kauverymeds-project.png",
